@@ -1,0 +1,50 @@
+﻿<Window x:Class="SpectrometerControl1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpectrometerControl1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="270" Width="525">
+
+    <Grid>
+
+        <Button x:Name ="ModeButton" Content="Mode" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="42" Click="modeButton_Click"/>
+        <TextBlock x:Name ="trigText" Text="Pump" HorizontalAlignment="Left" Margin="70,10,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name ="connect" Content="Spect" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="50" Click="connectButton_Click"/>
+        <TextBlock x:Name ="conText" HorizontalAlignment="Left" Margin="70,40,0,0" TextWrapping="Wrap" Text="Not Connected" VerticalAlignment="Top"/>
+
+        <TextBox x:Name ="integrationTime" HorizontalAlignment="Left" Height="23" Margin="28,65,0,0" TextWrapping="Wrap" Text="40" VerticalAlignment="Top" Width="32"/>
+        <Label x:Name ="label1" Content="Integration time (ms)" HorizontalAlignment="Left" Margin="70,65,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name ="port" Content="Pump" HorizontalAlignment="Left" Margin="270,40,0,0" VerticalAlignment="Top" Width="50" Click="portButton_Click"/>
+        <TextBlock x:Name ="portText" HorizontalAlignment="Left" Margin="330,40,0,0" TextWrapping="Wrap" Text="Port Not Connected" VerticalAlignment="Top"/>
+
+        <Button x:Name ="valve" Content="Valve" HorizontalAlignment="Left" Margin="270,90,0,0" VerticalAlignment="Top" Width="50" Click="dirButton_Click"/>
+        <TextBlock x:Name ="valveText" HorizontalAlignment="Left" Margin="330,90,0,0" TextWrapping="Wrap" Text="To Reservoir" VerticalAlignment="Top"/>
+
+        <Button x:Name ="direction" Content="Direct" HorizontalAlignment="Left" Margin="270,115,0,0" VerticalAlignment="Top" Width="50" Click="valveButton_Click"/>
+        <TextBlock x:Name ="dirText" HorizontalAlignment="Left" Margin="330,115,0,0" TextWrapping="Wrap" Text="Withdraw" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="volume"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="500" VerticalAlignment="Top" Width="50" Margin="270,65,0,0"/>
+        <Label x:Name ="volLabel" Content="Volume (uL)" HorizontalAlignment="Left" Margin="330,65,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="scans"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="32" Margin="28,100,0,0"/>
+        <Label x:Name ="label3" Content="Scans" HorizontalAlignment="Left" Margin="70,100,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name ="halfT" HorizontalAlignment="Left" Height="23" Margin="28,125,0,0" TextWrapping="Wrap" Text="1.5" VerticalAlignment="Top" Width="32"/>
+        <Label x:Name ="tHalflabel" Content="Estimate t1/2 (s)" HorizontalAlignment="Left" Margin="70,125,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name ="totalTime" HorizontalAlignment="Left" Height="23" Margin="28,150,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="32"/>
+        <Label x:Name ="label5" Content="Final Time (s)" HorizontalAlignment="Left" Margin="70,150,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name ="button" Content="Run" HorizontalAlignment="Left" Margin="28,200,0,0" VerticalAlignment="Top" Width="32" Click="runButton_Click"/>
+        
+        <Button x:Name ="saveData" Content="Save_Data" HorizontalAlignment="Left" Margin="200,150,0,0" VerticalAlignment="Top" Width="54" Click="saveData_Click"/>
+        <TextBox x:Name ="fileName" HorizontalAlignment="Left" Height="23" Margin="270,150,0,0" TextWrapping="Wrap" Text="File_Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="filePath" HorizontalAlignment="Left" Height="23" Margin="200,180,0,0" TextWrapping="Wrap" Text="C:\Users\summers\Documents\SpecData\" VerticalAlignment="Top" Width="280"/>
+        <Border x:Name ="box1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="15,95,0,0" VerticalAlignment="Top" Width="160"/>
+
+    </Grid>
+</Window>
